@@ -1,0 +1,68 @@
+.legend-icon {
+   vertical-align: bottom;
+   font-size: 25px !important;
+   display: inline !important;
+}
+
+.available {
+    display: inline !important;
+    cursor: pointer;
+    padding: 0 !important;
+    font-size: 35px !important;
+    color: green;
+}
+
+.booked {
+    display: inline !important;
+    cursor: not-allowed;
+    padding: 0 !important;
+    font-size: 35px !important;
+    color: red;
+}
+
+.selected {
+    display: inline !important;
+    cursor: pointer;
+    padding: 0 !important;
+    font-size: 35px !important;
+    color: purple;
+}
+
+.remove-padding {
+    padding: 0 !important;
+}
+
+.no-bottom-padding {
+    padding-bottom: 0 !important;
+}
+
+form {
+    height: auto !important;
+}
+
+.alert {
+    padding: 8px 35px 8px 14px;
+    margin-bottom: 18px;
+    color: #c09853;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+    background-color: #fcf8e3;
+    border: 1px solid #fbeed5;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+.alert-heading {
+    color: inherit;
+}
+.alert .close {
+    position: relative;
+    top: -2px;
+    right: -21px;
+    line-height: 18px;
+}
+
+.alert-danger, .alert-error {
+    color: #b94a48;
+    background-color: #f2dede;
+    border-color: #eed3d7;
+}

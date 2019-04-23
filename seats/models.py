@@ -11,7 +11,7 @@ class Seat(models.Model):
     AVAILABLE = "available"
 
     booked_by = models.ForeignKey(
-        User, related_name="seats", on_delete=models.CASCADE, null=True, blank=True
+        User, related_name="seats", on_delete=models.SET_NULL, null=True, blank=True
     )
     booked_at = models.DateTimeField(auto_now_add=True)
     status = models.CharField(
@@ -37,7 +37,7 @@ class Seat(models.Model):
         current_version = self.version
         updated_rows = Seat.objects.filter(
             id=self.id, status=self.AVAILABLE, version=current_version
-        ).update(user=user, status=self.BOOKED, version=current_version + 1)
+        ).update(booked_by=user, status=self.BOOKED, version=current_version + 1)
         return updated_rows > 0
 
     def clear_seat(self):
