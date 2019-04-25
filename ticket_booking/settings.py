@@ -26,7 +26,7 @@ SECRET_KEY = 'po+e==ahs8vr9$66j+ey5hqoev%q89gti*498%vao)pj+dz%@4'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = (os.environ.get("DEBUG", "true") == "true")
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['aakash-ticket-booking.herokuapp.com']
 
 
 # Application definition
