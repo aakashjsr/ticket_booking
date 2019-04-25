@@ -5,7 +5,7 @@ from django.shortcuts import reverse
 from django.contrib import messages
 
 from .models import Seat
-from .utils import get_user
+from .utils import get_user, send_booking_email
 from .forms import TicketForm
 
 
@@ -47,6 +47,8 @@ class BookSeatView(View):
         # Try to book seat
         seat = Seat.objects.get(id=seat_id)
         if seat.book_seat(user):
+            # TODO: move this to background job
+            send_booking_email(seat)
             messages.success(request, 'Your seat has been successfully booked')
             return HttpResponseRedirect(home_url)
         else:
