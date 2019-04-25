@@ -4,11 +4,16 @@
    display: inline !important;
 }
 
+.seat-label{
+    display: inline-block;
+}
+
+
 .available {
     display: inline !important;
     cursor: pointer;
     padding: 0 !important;
-    font-size: 35px !important;
+    font-size: 55px !important;
     color: green;
 }
 
@@ -16,15 +21,15 @@
     display: inline !important;
     cursor: not-allowed;
     padding: 0 !important;
-    font-size: 35px !important;
-    color: red;
+    font-size: 55px !important;
+    color: grey;
 }
 
 .selected {
     display: inline !important;
     cursor: pointer;
     padding: 0 !important;
-    font-size: 35px !important;
+    font-size: 55px !important;
     color: purple;
 }
 
