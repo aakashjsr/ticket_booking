@@ -17,7 +17,7 @@ class IndexView(TemplateView):
 
     def get_context_data(self, **kwargs):
         return {
-            "seats": Seat.objects.all()
+            "seats": Seat.objects.all().order_by("id")
         }
 
 
@@ -48,6 +48,7 @@ class BookSeatView(View):
         seat = Seat.objects.get(id=seat_id)
         if seat.book_seat(user):
             # TODO: move this to background job
+            seat.refresh_from_db()
             send_booking_email(seat)
             messages.success(request, 'Your seat has been successfully booked')
             return HttpResponseRedirect(home_url)
