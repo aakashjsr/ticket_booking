@@ -20,7 +20,7 @@ from seats.views import IndexView
 
 
 urlpatterns = [
-    path('admin/', admin.site.urls,),
-    path('seats/', include(('seats.urls', 'seats'), namespace='seats',)),
-    path('', IndexView.as_view(), name="index")
+    path("admin/", admin.site.urls),
+    path("seats/", include(("seats.urls", "seats"), namespace="seats")),
+    path("", IndexView.as_view(), name="index"),
 ]

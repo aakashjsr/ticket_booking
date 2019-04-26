@@ -15,8 +15,9 @@ class Seat(models.Model):
     )
     booked_at = models.DateTimeField(auto_now_add=True)
     status = models.CharField(
-        max_length=25, choices=[(BOOKED, BOOKED), (AVAILABLE, AVAILABLE)],
-        default=AVAILABLE
+        max_length=25,
+        choices=[(BOOKED, BOOKED), (AVAILABLE, AVAILABLE)],
+        default=AVAILABLE,
     )
     version = models.BigIntegerField(default=0)
 

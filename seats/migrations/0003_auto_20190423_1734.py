@@ -7,14 +7,18 @@ import django.db.models.deletion
 
 class Migration(migrations.Migration):
 
-    dependencies = [
-        ('seats', '0002_seed_seats'),
-    ]
+    dependencies = [("seats", "0002_seed_seats")]
 
     operations = [
         migrations.AlterField(
-            model_name='seat',
-            name='booked_by',
-            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='seats', to=settings.AUTH_USER_MODEL),
-        ),
+            model_name="seat",
+            name="booked_by",
+            field=models.ForeignKey(
+                blank=True,
+                null=True,
+                on_delete=django.db.models.deletion.SET_NULL,
+                related_name="seats",
+                to=settings.AUTH_USER_MODEL,
+            ),
+        )
     ]
